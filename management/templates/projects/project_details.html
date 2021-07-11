@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %} Projet {% endblock %}
+
+{% block content  %}
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-1 text-gray-800">Project details</h1>
+
+    <!-- Content Row -->
+    <div class="row">
+
+        <!-- Border Left Utilities -->
+        <div class="col-lg-6">
+
+            <div class="card mb-4 py-3 border-left-primary">
+                <div class="card-body">
+                    ID : {{project.id}}
+                </div>
+            </div>
+            <div class="card mb-4 py-3 border-left-primary">
+                <div class="card-body">
+                    Date de debut : {{project.date_debut}}
+                </div>
+            </div>
+            <div class="card mb-4 py-3 border-left-primary">
+                <div class="card-body">
+                    Description : {{project.desc}}
+                </div>
+            </div>
+        </div>
+
+        <!-- Border Bottom Utilities -->
+        <div class="col-lg-6">
+
+            <div class="card mb-4 py-3 border-bottom-primary">
+                <div class="card-body">
+                    Titre : {{project.titre}}
+                </div>
+            </div>
+            <div class="card mb-4 py-3 border-bottom-primary">
+                <div class="card-body">
+                    Date de fin : {{project.date_fin}}
+                </div>
+            </div>
+            <div class="card mb-4 py-3 border-bottom-primary">
+                <div class="card-body">
+                    Categorie : {{project.category.nom}}
+                </div>
+            </div>
+            
+
+
+        </div>
+
+    </div>
+
+</div>
+       
+        
+        
+        
+
+{% endblock  %}

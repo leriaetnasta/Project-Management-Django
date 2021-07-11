@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %} Ressource Materielle {% endblock %}
+
+{% block content  %}
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-1 text-gray-800">Ressource details</h1>
+
+    <!-- Content Row -->
+    <div class="row">
+
+        <!-- Border Left Utilities -->
+        <div class="col-lg-6">
+
+            <div class="card mb-4 py-3 border-left-primary">
+                <div class="card-body">
+                    ID : {{Ressource.id}}
+                </div>
+            </div>
+            <div class="card mb-4 py-3 border-left-primary">
+                <div class="card-body">
+                    Description : {{Ressource.desc}}
+                </div>
+            </div>
+        </div>
+
+        <!-- Border Bottom Utilities -->
+        <div class="col-lg-6">
+
+            <div class="card mb-4 py-3 border-bottom-primary">
+                <div class="card-body">
+                Tache : {{Ressource.tache.nom}}
+                </div>
+            </div>
+            
+
+
+        </div>
+
+    </div>
+
+</div>
+       
+        
+        
+        
+
+{% endblock  %}

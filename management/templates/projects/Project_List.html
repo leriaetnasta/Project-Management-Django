@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block title %} Projet {% endblock %}
+{% block content %}
+<a href="{% url 'projectCreate' %}" class="btn btn-link">Nouveau projet</a>
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Table</h1>
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Liste des projets</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Titre</th>
+                        <th>Description</th>
+                        <th>Date de debut</th>
+                        <th>Date de fin</th>
+                        <th>Categorie</th>
+                        <th>Details</th>
+                        <th>Modifier</th>
+                        <th>Supprimer</th>
+                      </tr>
+                      <tfoot>
+                    <tr>
+                        <th>ID</th>
+                        <th>Titre</th>
+                        <th>Description</th>
+                        <th>Date de debut</th>
+                        <th>Date de fin</th>
+                        <th>Categorie</th>
+                        <th>Details</th>
+                        <th>Modifier</th>
+                        <th>Supprimer</th>
+                    </tr>
+                    </tfoot>
+                      {% for projet in projects %}
+                      <tr>
+                        <th>{{projet.id}}</th>
+                        <td>{{projet.titre}}</td>
+                        <td>{{projet.desc}}</td>
+                        <td>{{projet.date_debut}}</td>
+                        <td>{{projet.date_fin}}</td>
+                        <td>{{projet.category.nom}}</td>
+                        
+                        <td>
+                            <span title="Plus de details">
+                                <a href="{% url 'projectDetails' projet.id %}" class="btn btn-info btn-circle btn-sm">
+                                <i class="fas fa-info-circle"></i>
+                            </a></span></td>
+                              <td>
+                                <span title="Modifier les données">
+                                    <a href="{% url 'projectUpdate' projet.id %}" class="btn btn-warning btn-circle btn-sm">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </a></span></td>
+                              <td>
+                                <span title="Supprimer l'objet"><a href="{% url 'projectDelete' projet.id %}" class="btn btn-danger btn-circle btn-sm">
+                                <i class="fas fa-trash"></i>
+                            </a></span></td>
+                      </tr>
+                       {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
+
+

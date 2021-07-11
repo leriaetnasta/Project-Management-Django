@@ -1,0 +1,77 @@
+{% extends 'publicpage.html' %}
+{% block title %} Taches {% endblock %}
+{% block content %}
+<main id="main">
+
+<section class="breadcrumbs">
+    <div class="container">
+
+      <div class="d-flex justify-content-between align-items-center">
+       
+        <ol>
+          
+        </ol>
+      </div>
+
+    </div>
+  </section>
+
+    <!-- Page Heading -->
+<!-- DataTales Example -->
+<section class="contact" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+    <div class="container">
+
+      <div class="row">
+      
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Liste des projets</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Date de debut</th>
+                        <th>Date de fin</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                        <th>Projet</th>
+                      </tr>
+                      <tfoot>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Date de debut</th>
+                        <th>Date de fin</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                        <th>Projet</th>
+                    </tr>
+                    </tfoot>
+                      {% for tache in taches %}
+                      <tr>
+                        <th>{{tache.id}}</th>
+                        <td>{{tache.nom}}</td>
+                        <td>{{tache.debut}}</td>
+                        <td>{{tache.fin}}</td>
+                        <td>{{tache.desc}}</td>
+                        <td>{{tache.status}}</td>
+                        <td>{{tache.projet.titre}}</td>
+                        
+                        
+                      </tr>
+                       {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div></div></section>
+    </main>
+{% endblock %}
+
+

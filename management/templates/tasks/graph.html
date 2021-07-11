@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %} Taches {% endblock %}
+{% block content %}
+{% if chart %}
+
+<img src="data:image/png;base64, {{chart|safe}}">
+
+{% endif %}
+
+{% endblock %}

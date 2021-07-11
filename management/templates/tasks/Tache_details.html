@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block title %} Tache {% endblock %}
+
+{% block content  %}
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-1 text-gray-800">Task details</h1>
+
+    <!-- Content Row -->
+    <div class="row">
+
+        <!-- Border Left Utilities -->
+        <div class="col-lg-6">
+            
+            <div class="card mb-4 py-3 border-left-primary">
+                <div class="card-body">
+                    ID : {{tache.id}}
+                </div>
+            </div>
+            <div class="card mb-4 py-3 border-left-primary">
+                <div class="card-body">
+                    Date et heure de debut : {{tache.date_Heure_debut}}
+                </div>
+            </div>
+            <div class="card mb-4 py-3 border-left-primary">
+                <div class="card-body">
+                    Status : {{tache.status}}
+                </div>
+            </div>
+            <div class="card mb-4 py-3 border-left-primary">
+                <div class="card-body">
+                    Description : {{tache.desc}}
+                </div>
+            </div>
+        </div>
+
+        <!-- Border Bottom Utilities -->
+        <div class="col-lg-6">
+
+            <div class="card mb-4 py-3 border-bottom-primary">
+                <div class="card-body">
+                    Nom : {{tache.nom}}
+                </div>
+            </div>
+            <div class="card mb-4 py-3 border-bottom-primary">
+                <div class="card-body">
+                    Date et heure de fin : {{tache.date_Heure_fin}}
+                </div>
+            </div>
+            <div class="card mb-4 py-3 border-bottom-primary">
+                <div class="card-body">
+                    Projet : {{tache.projet.nom}}
+                </div>
+            </div>
+            
+
+
+        </div>
+
+    </div>
+
+</div>
+       
+        
+        
+        
+
+{% endblock  %}

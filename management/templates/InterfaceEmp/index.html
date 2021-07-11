@@ -1,0 +1,218 @@
+{% extends 'publicpage.html' %}
+{% block title %} Accueil {% endblock %}
+
+{% block content  %}
+
+     <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex justify-cntent-center align-items-center">
+    <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Bienvenue sur <span>Rojesty</span></h2>
+          <p class="animate__animated animate__fadeInUp">L'application  qui donne la possibilité aux entreprises de gérer ses projets et ses tâches.</p>
+          <a href="" class="btn-get-started animate__animated animate__fadeInUp">Voir plus</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Notre application</h2>
+          <p class="animate__animated animate__fadeInUp"> Contient 3 espaces séparés, le premier pour la gestion des projets le deuxième pour gérer les employés et le 3eme pour les employés</p>
+          <a href="" class="btn-get-started animate__animated animate__fadeInUp">Voir plus</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Visualisation graphique </h2>
+          <p class="animate__animated animate__fadeInUp"> Suivre la progression d'un projet grâce au diagram</p>
+          <a href="" class="btn-get-started animate__animated animate__fadeInUp">En cours de preparations</a>
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Services Section ======= -->
+    <section class="services">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="icon-box icon-box-pink">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4 class="title"><a href="">Les administrateur</a></h4>
+              <p class="description">Peuvent s’authentifier, Gérer ses informations personnelles et gérer l'ensemble des employés.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box icon-box-cyan">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4 class="title"><a href="">Les responsables</a></h4>
+              <p class="description">Peuvent s’authentifier, Gérer les projets, les taches, les ressources materielles et gérer l'ensemble des employés.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box icon-box-green">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4 class="title"><a href="">Les employés </a></h4>
+              <p class="description">Peuvent s’authentifier,Voir les projets et les taches.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box icon-box-blue">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4 class="title"><a href="">La planification de projet</a></h4>
+              <p class="description">est plus facile avec Rojesty, Voyez qui travaille sur quoi, assignez des tâches à vos équipes et définissez les dates de debut et d'échéance.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6 video-box">
+            {% load static %}
+            {{ form.media }}
+            <img src="{% static 'employe/moderna/assets/img/why-us.jpg' %}" class="img-fluid" alt="">
+            <a href="" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+          </div>
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-fingerprint"></i></div>
+              <h4 class="title"><a href="">Vos bénéfices  </a></h4>
+              <p class="description">Gagnez du temps grâce a la gérez facile de tous les projets, taches et ressources materielles.</p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-gift"></i></div>
+              <h4 class="title"><a href="">Efficacité</a></h4>
+              <p class="description">Accédez partout, tout le temps.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section class="features">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Fonctionalités</h2>
+          <p>Cette application devra contenir Trois espaces séparées :</p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5">
+            <img src="{% static 'employe/moderna/assets/img/features-1.svg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-4">
+            <h3>Administrateur :</h3>
+            <p class="fst-italic">
+              Cet espace va permettre à l’administrateur de :
+            </p>
+            <ul>
+              <li><i class="bi bi-check"></i> S’authentifier: l’administrateur doit s’authentifier avant d’accéder à l’application.
+                </li>
+              <li><i class="bi bi-check"></i> Gérer ses informations personnelles.</li>
+                <li><i class="bi bi-check"></i> Gérer ses informations personnelles.Gérer les comptes utilisateurs : ajout ou suppression d’un compte </li>
+                  <li><i class="bi bi-check"></i> Gérer ses informations personnelles.(administrateur ou responsable). Chaque compte utilisateur est caractérisé par le nom, prénom, adresse, email, ville, téléphone, CIN, image, login, mot de passe</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5 order-1 order-md-2">
+            <img src="{% static 'employe/moderna/assets/img/features-3.svg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-5 order-2 order-md-1">
+            <h3>Employe :</h3>
+            <p class="fst-italic">
+              Peuvent S’authentifier.
+            </p>
+            <p>
+              Voir les projets et les taches.
+            </p>
+          </div>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5">
+            <img src="{% static 'employe/moderna/assets/img/features-4.svg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-5">
+            <h3>Responsables :</h3>
+            <p>S’authentifier : le responsable doit s’authentifier avant d’accéder à l’application.<ul>
+              <li><i class="bi bi-check"></i> Gérer ses informations personnelles.</li>
+              <li><i class="bi bi-check"></i> Ajouter des projets : chaque projet est caractérisé par un titre, une description,
+                date de début et une date de fin.</li>
+              <li><i class="bi bi-check"></i> Modifier les informations des projets.</li>
+              <li><i class="bi bi-check"></i> Supprimer des projets.</li>
+              <li><i class="bi bi-check"></i> Les projets sont classés par catégorie : chaque catégorie est caractérisée par un
+                nom et une description.</li>
+              <li><i class="bi bi-check"></i> Ajouter, supprimer ou modifier les tâches d’un projet : chaque tâche de projet
+                est caractérisée par le nom, une description, date et heure de début, date et heure
+                de fin.</li>
+              <li><i class="bi bi-check"></i> Gérer les ressources matérielles d’une tâche : chaque ressource matérielle est
+                  caractérisée par un nom et une description.</li>
+              <li><i class="bi bi-check"></i> Gérer les employés : chaque employé est caractérisé par un nom, prénom, CE (code employé), date de naissance, rôle, login, mot de passe.</li>
+              <li><i class="bi bi-check"></i> Affecter des employés à des projets.</li>
+              <li><i class="bi bi-check"></i> Chaque employer peut participer à la réalisation de plusieurs projets.</li>
+                <li><i class="bi bi-check"></i>  Consulter la liste des employés participants dans un projet.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5 order-1 order-md-2">
+            <img src="{% static 'employe/moderna/assets/img/features-2.svg' %}" class="img-fluid" alt="">
+          </div>
+          
+          <div class="col-md-7 pt-5 order-2 order-md-1">
+            <h3>Les Diagrames/h3>
+            <p class="fst-italic">
+              Les responsables peuvent visualiser graphiquement les données concernant les taches
+ 
+            </p>
+            <p>
+              Exporter le planning du projet sous plusieurs formats (PDF, JPG, PNG...).
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
+
+  </main><!-- End #main -->
+
+                    
+
+{% endblock  %}
